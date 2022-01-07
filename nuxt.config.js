@@ -1,6 +1,6 @@
 export default {
   router: {
-    base: "/InsistHairSalon/dist",
+    base: "/InsistHairSalon/dist/",
     scrollBehavior: () => ({y: 0}),
   },
   head: {
