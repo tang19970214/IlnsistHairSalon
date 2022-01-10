@@ -1,6 +1,6 @@
 export default {
   router: {
-    base: "/InsistHairSalon/dist/",
+    // base: "/InsistHairSalon/dist/",
     scrollBehavior: () => ({y: 0}),
   },
   head: {
@@ -44,7 +44,7 @@ export default {
     'nuxt-fontawesome'
   ],
   fontawesome: {
-    component: 'fa', 
+    component: 'fa',
     imports: [
       // 引入 fas 所有的icon
       {
