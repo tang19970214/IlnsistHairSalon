@@ -43,7 +43,7 @@ export default {
         { id: 1, label: "首頁", path: "/" },
         { id: 2, label: "價目表", path: "/price" },
         { id: 3, label: "預約方式", path: "/reservation" },
-        { id: 4, label: "案例作品集", path: "/knowledge" },
+        { id: 4, label: "案例作品集", path: "/portfolio" },
         { id: 5, label: "頂級頭皮養護工程", path: "/scalpcare" },
         { id: 6, label: "人才招募", path: "/recruitment" },
       ],

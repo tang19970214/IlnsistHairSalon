@@ -18,23 +18,75 @@
       </div>
 
       <form class="text-[#606266] flex flex-col gap-7 my-8" @submit.prevent="submit()">
-        <div class="w-full grid grid-cols-12 gap-3" v-if="queList.length > 0">
-          <div class="w-full flex flex-col" :class="`col-span-${item.grid}`" v-for="item in queList" :key="item.id">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">{{item.que}}</label>
-
-            <!-- input -->
-            <input v-if="item.type === 'input'" v-model="temp[item.field]" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
-            <!-- radio -->
-            <div class="w-full h-10 flex items-center flex-wrap gap-3" v-if="item.type === 'radio'">
-              <div class="flex items-center" v-for="(items, idx) in item.options" :key="idx">
-                <input v-model="temp[item.field]" :id="`${item.id}-${idx}`" :name="item.no" type="radio" :value="items.value" class="mr-1" required>
-                <label class="font-medium tracking-wider" :for="`${item.id}-${idx}`">{{items.label}}</label>
+        <div class="w-full grid grid-cols-12 gap-3">
+          <!-- 請問您的姓名？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的姓名？</label>
+            <input v-model="temp.name" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您的性別？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的性別？</label>
+            <div class="w-full h-10 flex items-center flex-wrap gap-3">
+              <div class="flex items-center" v-for="(item, idx) in options" :key="idx">
+                <input v-model="temp.sex" :id="idx" type="radio" :value="item.value" class="mr-1" required>
+                <label class="font-medium tracking-wider" :for="idx">{{item.label}}</label>
               </div>
             </div>
           </div>
+          <!-- 請問您的聯絡手機號碼？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的聯絡手機號碼？</label>
+            <input v-model="temp.phone" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您的出生年次？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的出生年次？</label>
+            <input v-model="temp.birthday" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您的助理年資？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的助理年資？</label>
+            <input v-model="temp.subYear" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您的設計師資歷(截至本月)？ -->
+          <div class="w-full flex flex-col col-span-6">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的設計師資歷(截至本月)？</label>
+            <input v-model="temp.workYear" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您目前還在原本的沙龍服務還是已經離職？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您目前還在原本的沙龍服務還是已經離職？</label>
+            <input v-model="temp.status" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？</label>
+            <input v-model="temp.lastLocation" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問想要來應徵的主要原因？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問想要來應徵的主要原因？</label>
+            <input v-model="temp.mainPurpose" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 請問您最喜歡的技術項目？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您最喜歡的技術項目？</label>
+            <input v-model="temp.skill" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？</label>
+            <input v-model="temp.hopeLocation" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
+          <!-- 如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？ -->
+          <div class="w-full flex flex-col col-span-12">
+            <label class="md:whitespace-nowrap mb-1 md:text-lg">設計師請留下作品集連結，IG/FB都可(不接受沒有作品的應徵，請勿留下私人未公開的帳號)？</label>
+            <input v-model="temp.link" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
+          </div>
         </div>
 
-        <input type="submit" value="確定送出" class="w-full bg-primary text-white text-lg font-bold p-2 rounded cursor-pointer duration-500 hover:opacity-80" />
+        <input type="submit" value="確定送出" class="w-full bg-primary text-white text-lg font-bold p-2 rounded cursor-pointer duration-500 hover:opacity-80 disabled:opacity-80" :disabled="btnLoading" />
       </form>
     </div>
   </section>
@@ -62,101 +114,19 @@ export default {
   data() {
     return {
       temp: JSON.parse(JSON.stringify(formTemplate)),
-      // 題目及答案
-      queList: [
-        {
-          id: 1,
-          que: "請問您的姓名？",
-          type: "input",
-          field: "name",
-          grid: "6",
-        },
-        {
-          id: 2,
-          que: "請問您的性別？",
-          type: "radio",
-          options: [
-            { label: "男", value: "男" },
-            { label: "女", value: "女" },
-          ],
-          field: "sex",
-          grid: "6",
-        },
-        {
-          id: 3,
-          que: "請問您的聯絡手機號碼？",
-          type: "input",
-          field: "phone",
-          grid: "6",
-        },
-        {
-          id: 4,
-          que: "請問您的出生年次？",
-          type: "input",
-          field: "birthday",
-          grid: "6",
-        },
-        {
-          id: 5,
-          que: "請問您的助理年資？",
-          type: "input",
-          field: "subYear",
-          grid: "6",
-        },
-        {
-          id: 6,
-          que: "請問您的設計師資歷(截至本月)？",
-          type: "input",
-          field: "workYear",
-          grid: "6",
-        },
-        {
-          id: 7,
-          que: "請問您目前還在原本的沙龍服務還是已經離職？",
-          type: "input",
-          field: "status",
-          grid: "12",
-        },
-        {
-          id: 8,
-          que: "請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？",
-          type: "input",
-          field: "lastLocation",
-          grid: "12",
-        },
-        {
-          id: 9,
-          que: "請問想要來應徵的主要原因？",
-          type: "input",
-          field: "mainPurpose",
-          grid: "12",
-        },
-        {
-          id: 10,
-          que: "請問您最喜歡的技術項目？",
-          type: "input",
-          field: "skill",
-          grid: "12",
-        },
-        {
-          id: 11,
-          que: "如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？",
-          type: "input",
-          field: "hopeLocation",
-          grid: "12",
-        },
-        {
-          id: 12,
-          que: "設計師請留下作品集連結，IG/FB都可(不接受沒有作品的應徵，請勿留下私人未公開的帳號)？",
-          type: "input",
-          field: "link",
-          grid: "12",
-        },
+
+      options: [
+        { label: "男", value: "男" },
+        { label: "女", value: "女" },
       ],
+
+      btnLoading: false,
     };
   },
   methods: {
-    submit() {
+    async submit() {
+      this.btnLoading = true;
+
       const bodyFormData = new FormData();
       bodyFormData.set("entry.540998229", this.temp.name);
       bodyFormData.set("entry.1528075270", this.temp.sex);
@@ -172,7 +142,7 @@ export default {
       bodyFormData.set("entry.1144177421", this.temp.link);
       bodyFormData.set("fvv", 1);
 
-      axios
+      await axios
         .post(
           "https://docs.google.com/forms/u/0/d/e/1FAIpQLSchzw86Rs7DMaZ8e0u4hEEUrJ8ONdPiZvtR-6vUHhQCQAL4vA/formResponse",
           bodyFormData,
@@ -189,6 +159,7 @@ export default {
             confirmButtonText: "確認",
             confirmButtonColor: "#e8a19e",
           });
+          this.btnLoading = false;
         })
         .catch(() => {
           this.temp = JSON.parse(JSON.stringify(formTemplate));
@@ -201,6 +172,7 @@ export default {
             confirmButtonText: "確認",
             confirmButtonColor: "#e8a19e",
           });
+          this.btnLoading = false;
         });
     },
   },
