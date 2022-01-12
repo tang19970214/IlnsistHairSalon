@@ -1,10 +1,10 @@
 <template>
   <section class="w-full min-h-screen">
-    <div class="w-4/5 mx-auto text-black text-opacity-70">
-      <div class="w-full my-5">
-        <img src="~/static/images/schedule.jpg" alt="價目表" width="100%">
-      </div>
+    <div class="w-full mb-5">
+      <img src="~/static/images/schedule.jpg" alt="價目表" width="100%">
+    </div>
 
+    <div class="w-4/5 mx-auto text-black text-opacity-70">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-3 mg:gap-5" data-aos="fade-up" data-aos-duration="1000">
         <!-- 消費特色 -->
         <div class="w-full py-3">
