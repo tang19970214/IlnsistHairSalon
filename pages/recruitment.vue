@@ -1,32 +1,32 @@
 <template>
   <section class="w-full min-h-screen">
-    <div class="w-4/5 mx-auto text-black text-opacity-70">
-      <div class="w-full p-5 box-border bg-primary bg-opacity-60">
-        <div class="w-full flex flex-col items-center justify-center bg-white p-5 rounded-lg">
-          <strong class="border-b-4 border-primary text-[60px]">人才招募</strong>
+    <div class="w-full p-5 box-border bg-primary bg-opacity-60">
+      <div class="w-full flex flex-col items-center justify-center bg-white p-5 rounded-lg">
+        <strong class="border-b-4 border-primary text-[60px]">人才招募</strong>
 
-          <div class="relative">
-            <p class="relative mt-4 text-gray-500 text-3xl z-10 tracking-wider">誠徵設計師、助理</p>
-            <span class="absolute bottom-2 right-0 w-48 h-2 bg-[#F1d25b] bg-opacity-80"></span>
-          </div>
+        <div class="relative">
+          <p class="relative mt-4 text-gray-500 text-3xl z-10 tracking-wider">誠徵設計師、助理</p>
+          <span class="absolute bottom-2 right-0 w-48 h-2 bg-[#F1d25b] bg-opacity-80"></span>
         </div>
       </div>
+    </div>
 
+    <div class="w-full md:w-4/5 mx-auto p-4 md:p-0 text-black text-opacity-70">
       <!-- form -->
-      <div class="w-full border-b border-primary p-2 mt-8">
+      <div class="w-full border-b border-primary p-2 md:mt-8">
         <label class="text-lg md:text-xl lg:text-2xl text-primary">招募表單</label>
       </div>
 
       <form class="text-[#606266] flex flex-col gap-7 my-8" @submit.prevent="submit()">
         <div class="w-full grid grid-cols-12 gap-3">
           <!-- 請問您的姓名？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的姓名？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的姓名？</label>
             <input v-model="temp.name" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您的性別？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的性別？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的性別？</label>
             <div class="w-full h-10 flex items-center flex-wrap gap-3">
               <div class="flex items-center" v-for="(item, idx) in options" :key="idx">
                 <input v-model="temp.sex" :id="idx" type="radio" :value="item.value" class="mr-1" required>
@@ -35,53 +35,53 @@
             </div>
           </div>
           <!-- 請問您的聯絡手機號碼？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的聯絡手機號碼？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的聯絡手機號碼？</label>
             <input v-model="temp.phone" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您的出生年次？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的出生年次？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的出生年次？</label>
             <input v-model="temp.birthday" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您的助理年資？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的助理年資？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的助理年資？</label>
             <input v-model="temp.subYear" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您的設計師資歷(截至本月)？ -->
-          <div class="w-full flex flex-col col-span-6">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您的設計師資歷(截至本月)？</label>
+          <div class="w-full flex flex-col col-span-12 md:col-span-6">
+            <label class="mb-1 md:text-lg">請問您的設計師資歷(截至本月)？</label>
             <input v-model="temp.workYear" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您目前還在原本的沙龍服務還是已經離職？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您目前還在原本的沙龍服務還是已經離職？</label>
+            <label class="mb-1 md:text-lg">請問您目前還在原本的沙龍服務還是已經離職？</label>
             <input v-model="temp.status" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？</label>
+            <label class="mb-1 md:text-lg">請問目前(上一家)服務的髮廊位於哪一地區(Ex.中山區)？</label>
             <input v-model="temp.lastLocation" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問想要來應徵的主要原因？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問想要來應徵的主要原因？</label>
+            <label class="mb-1 md:text-lg">請問想要來應徵的主要原因？</label>
             <input v-model="temp.mainPurpose" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 請問您最喜歡的技術項目？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">請問您最喜歡的技術項目？</label>
+            <label class="mb-1 md:text-lg">請問您最喜歡的技術項目？</label>
             <input v-model="temp.skill" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？</label>
+            <label class="mb-1 md:text-lg">如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？</label>
             <input v-model="temp.hopeLocation" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
           <!-- 如之後面試有錄取，希望在哪一區上班(希望與實際分配不一定相同，會依錄取時的狀況而訂)？ -->
           <div class="w-full flex flex-col col-span-12">
-            <label class="md:whitespace-nowrap mb-1 md:text-lg">設計師請留下作品集連結，IG/FB都可(不接受沒有作品的應徵，請勿留下私人未公開的帳號)？</label>
+            <label class="mb-1 md:text-lg">設計師請留下作品集連結，IG/FB都可(不接受沒有作品的應徵，請勿留下私人未公開的帳號)？</label>
             <input v-model="temp.link" type="text" class="w-full h-10 box-border py-2 px-3 bg-white border border-[#888888] rounded" required="required" />
           </div>
         </div>

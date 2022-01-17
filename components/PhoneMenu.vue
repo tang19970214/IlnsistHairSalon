@@ -21,7 +21,7 @@
 
           <div class="w-full h-full flex items-center justify-center px-2">
             <div class="mx-auto flex flex-col gap-6">
-              <div class="flex items-center gap-4" v-for="item in menuList" :key="item.id" @click="goToPage(item.path)">
+              <div class="flex items-center gap-4" :class="{'font-bold tracking-widest': $route.path === item.path}" v-for="item in menuList" :key="item.id" @click="goToPage(item.path)">
                 <p class="border-t border-primary text-primary md:text-lg">0{{item.id}}</p>
                 <label class="text-primary md:text-lg">{{item.label}}</label>
               </div>
@@ -63,3 +63,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s;
+}
+
+.v-enter,
+.v-leave-active {
+  opacity: 0;
+}
+</style>
