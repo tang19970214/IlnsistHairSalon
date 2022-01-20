@@ -10,7 +10,7 @@
         <img class="w-16" src="~/static/images/global/Facebook.svg" alt="FACEBOOK">
       </a>
       <a href="https://lin.ee/EZoNp6W" target="_blank">
-        <img class="w-16" src="~/static/images/global/reserve.svg" alt="LINE">
+        <img class="w-16" src="~/static/images/global/Reserve.svg" alt="LINE">
       </a>
       <a v-if="heightOverZero" class="animate-bounce mt-4 p-3 rounded-full bg-[#FAE3DF]" @click="goTop()">
         <img src="~/static/images/global/GoTop.svg" alt="GO TOP">
