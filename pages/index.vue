@@ -99,13 +99,13 @@
         <label class="text-lg md:pr-6">Address</label>
         <div class="pl-10 md:pl-0 box-border flex flex-col md:flex-row md:items-center lg:flex-col lg:items-start flex-wrap gap-5">
           <p>
-            <fa class="mr-1" :icon="['fas', 'home']" />新北市文化路一段435巷31弄9號
+            <fa class="mr-1" :icon="['fas', 'home']" />新北市板橋區中山路一段50巷11號2樓
           </p>
           <p>
-            <fa class="mr-1" :icon="['fas', 'clock']" />02-3564-0258
+            <fa class="mr-1" :icon="['fas', 'clock']" />02-29590801
           </p>
           <p>
-            <fa class="mr-1" :icon="['fas', 'phone-alt']" />10:00 a.m - 20:00 p.m
+            <fa class="mr-1" :icon="['fas', 'phone-alt']" />12:00 a.m - 08:00 p.m
           </p>
         </div>
       </div>

@@ -9,7 +9,7 @@
           <a href="" target="_blank">
             <img src="~/static/images/instagram.svg" alt="INSTAGRAM">
           </a>
-          <a href="https://lin.ee/https://lin.ee/LRmy5YA" target="_blank">
+          <a href="https://lin.ee/EZoNp6W" target="_blank">
             <img src="~/static/images/line.svg" alt="LINE">
           </a>
         </div>
@@ -29,10 +29,10 @@
           </div>
 
           <div class="w-full flex items-center justify-center pb-5">
-            <button class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
+            <a href="https://lin.ee/EZoNp6W" target="_blank" class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
               <p class="tracking-[0.2em]">Reserve</p>
               <p class="text-sm tracking-[0.5em]">立即預約</p>
-            </button>
+            </a>
           </div>
         </div>
       </div>
