@@ -20,10 +20,10 @@
       <!-- <div class="flex items-center gap-2"> -->
       <div class="hidden md:block pr-4 lg:pr-0">
         <div class="inline-block">
-          <a href="https://lin.ee/EZoNp6W" target="_blank" class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
+          <button @click="reserveNow()" class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
             <p class="tracking-[0.2em]">Reserve</p>
             <p class="text-sm tracking-[0.5em]">立即預約</p>
-          </a>
+          </button>
         </div>
       </div>
 
@@ -61,6 +61,9 @@ export default {
   methods: {
     goToPage(path) {
       this.$router.push(path);
+    },
+    reserveNow() {
+      window.open("https://lin.ee/EZoNp6W", "_blank");
     },
   },
 };

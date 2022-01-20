@@ -29,10 +29,10 @@
           </div>
 
           <div class="w-full flex items-center justify-center pb-5">
-            <a href="https://lin.ee/EZoNp6W" target="_blank" class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
+            <button @click="reserveNow()" class="lg:py-1 px-10 lg:px-14 border border-gold2 bg-clip-text text-[#C1AC7A] bg-gradient-to-r from-gold1 to-gold2 duration-500 delay-100 hover:bg-clip-padding hover:text-white">
               <p class="tracking-[0.2em]">Reserve</p>
               <p class="text-sm tracking-[0.5em]">立即預約</p>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -59,6 +59,9 @@ export default {
     },
     closeMenu() {
       this.$emit("closeMenu");
+    },
+    reserveNow() {
+      window.open("https://lin.ee/EZoNp6W", "_blank");
     },
   },
 };
