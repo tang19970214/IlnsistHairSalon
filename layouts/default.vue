@@ -2,7 +2,7 @@
   <div class="relative w-full min-h-screen bg-white font-mono">
     <Header />
 
-    <div class="md:hidden fixed right-3 top-[55vh] z-10 flex items-center justify-center flex-col">
+    <div class="md:hidden fixed right-3 z-10 flex items-center justify-center flex-col" :class="{'bottom-10': heightOverZero, 'bottom-[103px]': !heightOverZero}">
       <a href="https://www.instagram.com/insist_hair_salon/" target="_blank">
         <img class="w-16" src="~/static/images/global/Instagram.svg" alt="INSTAGRAM">
       </a>

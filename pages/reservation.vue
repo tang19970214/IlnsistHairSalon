@@ -13,7 +13,7 @@
             </div>
           </div>
 
-          <div class="w-full mt-4 flex flex-col lg:flex-row items-center justify-center lg:justify-around text-gray-500">
+          <div class="w-full mt-4 flex flex-col lg:flex-row items-center justify-center gap-3 lg:justify-around text-gray-500">
             <div class="flex items-center justify-around">
               <div class="relative w-[25%] lg:w-[20%]" v-for="item in iconList.left" :key="item.id">
                 <img class="w-full" :src="require(`~/static/images/reservation/${item.imgName}.png`)" :alt="item.title">
@@ -39,8 +39,8 @@
         </div>
       </div>
 
-      <!-- process -->
-      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 mt-6 mb-10 flex flex-col md:flex-row items-center gap-3">
+      <!-- text process -->
+      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mt-6 mb-10 flex flex-col md:flex-row items-center gap-3">
         <div class="w-40 flex flex-col items-center justify-center gap-1 whitespace-nowrap">
           <span class="w-36 h-36 mb-2 rounded-full shadow-lg bg-primary bg-opacity-80 flex items-center justify-center">
             <img class="w-32" src="~/static/images/LOGO-dark.png" alt="">
@@ -49,11 +49,16 @@
           <p>線上預約查詢專用</p>
         </div>
 
-        <div class="flex items-center flex-wrap gap-2">
+        <div class="flex items-center flex-wrap gap-2" data-aos="fade-up" data-aos-duration="1000">
           <div class="border border-primary rounded-xl bg-white p-2 md:p-4 text-primary" v-for="(title, idx) in stepList" :key="idx">
             <strong class="md:text-lg lg:text-xl">{{idx+1}}. {{title}}</strong>
           </div>
         </div>
+      </div>
+
+      <!-- image process -->
+      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border flex flex-col gap-2 mb-5">
+        <img :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000">
       </div>
     </div>
   </section>

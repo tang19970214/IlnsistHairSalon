@@ -6,7 +6,7 @@
 
     <div class="w-full py-5 lg:py-14 bg-[#F4F4F4]">
       <div class="w-full lg:w-4/5 px-5 lg:px-0 mx-auto flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        <img class="w-full" src="~/static/images/index1.png" alt="">
+        <img class="w-full" src="~/static/images/home.jpg" alt="">
         <div class="w-full flex items-start py-2 lg:pl-5 box-border">
           <!-- <label class="writing-vertical text-primary mr-2 lg:mx-8 text-xl rotate-180">Concept</label> -->
 
@@ -37,7 +37,7 @@
     </div>
 
     <div class="w-full lg:w-4/5 px-5 lg:px-0 lg:py-4 mx-auto flex flex-col justify-center lg:odd:flex-row lg:even:flex-row-reverse" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" v-for="item in descList" :key="item.id">
-      <img src="~/static/images/index1.png" alt="">
+      <img :src="item.imgUrl" alt="">
       <div class="w-full flex items-start justify-center px-4">
 
         <div class="w-full py-5 lg:py-0 flex flex-col">
@@ -121,6 +121,7 @@ export default {
       descList: [
         {
           id: 1,
+          imgUrl: require("~/static/images/selectHair.jpg"),
           title: [
             "確認髮質狀況，提供合適建議。",
             "當然，這些都會是依照每一位顧客的需求以及髮質做出客製化提案，最後由顧客挑選喜歡的方案。",
@@ -136,6 +137,7 @@ export default {
         },
         {
           id: 2,
+          imgUrl: require("~/static/images/satisfy.jpg"),
           title: ["提高滿意度 堅持友善環境"],
           content: "Insist Hair Salon 美髮服務流程",
           contents: [
