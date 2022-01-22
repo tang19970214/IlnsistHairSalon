@@ -4,7 +4,7 @@ export default {
     scrollBehavior: () => ({y: 0}),
   },
   head: {
-    title: 'insistHairSalon',
+    title: 'InsistHairSalon',
     htmlAttrs: {
       lang: 'en'
     },

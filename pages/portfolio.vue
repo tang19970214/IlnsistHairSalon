@@ -18,7 +18,7 @@
         </div>
 
         <div class="w-full flex items-center justify-center">
-          <button class="w-24 h-24 flex items-center justify-center bg-white border border-primary text-primary text-2xl rounded-full p-3 box-border shadow-lg duration-300 hover:bg-primary hover:text-white hover:shadow-inner">立馬預約</button>
+          <a href="https://lin.ee/EZoNp6W" target="_blank" class="w-24 h-24 flex items-center justify-center text-center bg-white border border-primary text-primary text-2xl rounded-full p-3 box-border shadow-lg duration-300 hover:bg-primary hover:text-white hover:shadow-inner">立馬預約</a>
         </div>
       </div>
     </div>

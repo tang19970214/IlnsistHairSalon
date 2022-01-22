@@ -24,7 +24,6 @@
             </div>
             <ul class="lg:text-lg tracking-wider whitespace-nowrap mt-4 lg:mt-0 lg:pt-5">
               <li>簡單操作立刻預約</li>
-              <li>詳細設計師群介紹</li>
               <li>首次加入領取100元禮卷</li>
             </ul>
             <div class="flex items-center justify-around">
@@ -40,7 +39,7 @@
       </div>
 
       <!-- text process -->
-      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mt-6 mb-10 flex flex-col md:flex-row items-center gap-3">
+      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mt-6 flex flex-col md:flex-row items-center gap-3">
         <div class="w-40 flex flex-col items-center justify-center gap-1 whitespace-nowrap">
           <span class="w-36 h-36 mb-2 rounded-full shadow-lg bg-primary bg-opacity-80 flex items-center justify-center">
             <img class="w-32" src="~/static/images/LOGO-dark.png" alt="">
@@ -56,9 +55,29 @@
         </div>
       </div>
 
+      <div class="relative w-full md:w-4/5 mx-auto flex flex-col lg:flex-row items-center justify-center mb-4">
+        <div class="w-full md:w-auto flex items-center justify-center mt-5 md:mt-0">
+          <div class="flex flex-col gap-3 text-lg lg:text-2xl text-[#56A033]">
+            <strong>加入官方LINE@</strong>
+            <div class="w-full h-[2px] bg-[#56A033]"></div>
+            <strong>LINE@ <label class="text-black text-opacity-80 font-light">@871dlyrt</label></strong>
+          </div>
+          <img class="w-24 lg:w-28" src="~/static/images/reservation/lineQrcode.png" alt="QR code">
+        </div>
+
+        <img class="max-w-[300px]" src="~/static/images/reservation/person.png" alt="">
+
+        <div class="w-full md:w-auto lg:max-w-[300px] flex flex-col md:text-lg lg:text-xl text-center lg:text-left">
+          <p>歡迎加入我們的線上預約系統！</p>
+          <p>新加入的朋友有<b class="text-primary">100元現金禮卷</b>可以抵用在<b class="text-primary">染髮、燙髮、頂級頭皮養護工程</b>上！</p>
+        </div>
+      </div>
+
       <!-- image process -->
-      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border flex flex-col gap-2 mb-5">
-        <img :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000">
+      <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mb-5">
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <img class="w-full lg:w-auto lg:max-h-[500px]" :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000">
+        </div>
       </div>
     </div>
   </section>
@@ -69,11 +88,10 @@ export default {
   data() {
     return {
       stepList: [
-        "加入ＬＩＮＥ",
-        "註冊建立新帳戶",
-        "簡訊驗證",
-        "完成開通",
-        "線上預約",
+        "加入Line@",
+        "進入聊天界面",
+        "輸入：可以預約嗎？",
+        "洽談後成功預約",
       ],
       iconList: {
         left: [

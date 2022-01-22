@@ -6,12 +6,15 @@
 
     <div class="w-full py-5 lg:py-14 bg-[#F4F4F4]">
       <div class="w-full lg:w-4/5 px-5 lg:px-0 mx-auto flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        <img class="w-full" src="~/static/images/home.jpg" alt="">
-        <div class="w-full flex items-start py-2 lg:pl-5 box-border">
+        <img class="w-full lg:max-w-[600px]" src="~/static/images/home.jpg" alt="">
+        <div class="w-full flex items-start lg:pl-5 box-border">
           <!-- <label class="writing-vertical text-primary mr-2 lg:mx-8 text-xl rotate-180">Concept</label> -->
 
-          <div class="flex flex-col">
-            <strong class="text-lg lg:text-xl text-black text-opacity-60 mb-2">（標題）</strong>
+          <div class="flex flex-col mt-2">
+            <!-- <strong class="text-lg lg:text-xl text-black text-opacity-60 mb-2">（標題）</strong> -->
+            <div class="inline-block mb-2">
+              <img class="w-auto h-10" src="~/static/images/LOGO.png" alt="INSIST HAIR SALON">
+            </div>
             <p class="text-black text-opacity-40 tracking-widest leading-7 mb-1">
               集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，不斷的自我成長[堅持]走在流行尖端是基本態度，善於溝通與傾聽，你不一定要花到很多錢找名師，在lnsist Hair Salon，沒有誇張的手法，讓一切回歸髮廊最貼近妳生活，[堅持]變美變得更簡單無壓力，以歐洲的手刷染、日韓的燙髮以及台灣剪裁，讓我們帶著你輕消費。
             </p>
@@ -37,8 +40,9 @@
     </div>
 
     <div class="w-full lg:w-4/5 px-5 lg:px-0 lg:py-4 mx-auto flex flex-col justify-center lg:odd:flex-row lg:even:flex-row-reverse" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" v-for="item in descList" :key="item.id">
-      <img :src="item.imgUrl" alt="">
-      <div class="w-full flex items-start justify-center px-4">
+      <img class="w-full lg:max-w-[600px] object-cover" :src="item.imgUrl" alt="">
+      <!-- 圖片尺寸統一後，改成items-start -->
+      <div class="w-full flex justify-center px-4" :class="{'items-center': item.id === 1, 'items-start': item.id > 1}">
 
         <div class="w-full py-5 lg:py-0 flex flex-col">
           <strong class="text-lg lg:text-xl text-black text-opacity-70 leading-7 mb-2" v-for="(title, i) in item.title" :key="i">{{title}}</strong>
@@ -64,7 +68,7 @@
     </div>
 
     <!-- Recommendations 好評分享 -->
-    <div class="w-full mt-5">
+    <!-- <div class="w-full mt-5">
       <div class="w-full pt-16 md:pt-20 pb-32 bg-primary flex items-start justify-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <strong class="text-white text-xl md:text-2xl">Recommendations</strong>
         <strong class="text-white text-xl md:text-2xl">好評分享</strong>
@@ -80,12 +84,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- address -->
     <div class="w-full flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">
       <div class="relative w-full">
-        <img class="w-full" src="~/static/images/addressBg.png" alt="">
+        <div class="relative w-full">
+          <div class="absolute left-0 top-0 w-full h-48 bg-white bg-opacity-50 z-10"></div>
+          <img class="w-full h-48 object-cover" src="~/static/images/addressBg.jpg" alt="">
+        </div>
 
         <div class="absolute -bottom-5 left-0 w-full flex items-center justify-center z-10">
           <button class="px-4 py-2 border border-[#C1AC7A] bg-white text-[#C1AC7A] flex items-center tracking-tight duration-500 hover:bg-[#C1AC7A] hover:text-white" @click="openGoogleMap()">
@@ -122,10 +129,18 @@ export default {
         {
           id: 1,
           imgUrl: require("~/static/images/selectHair.jpg"),
-          title: [
-            "確認髮質狀況，提供合適建議。",
+          title: ["確認髮質狀況，提供合適建議。"],
+          contents: [
+            "確認髮質狀況",
+            "確認頭髮狀況",
+            "提供合適建議",
             "當然，這些都會是依照每一位顧客的需求以及髮質做出客製化提案，最後由顧客挑選喜歡的方案。",
           ],
+        },
+        {
+          id: 2,
+          imgUrl: require("~/static/images/cut.jpg"),
+          title: [],
           contents: [
             "消費項目價格清楚透明",
             "所有項目不分長短均一價",
@@ -136,7 +151,7 @@ export default {
           ],
         },
         {
-          id: 2,
+          id: 3,
           imgUrl: require("~/static/images/satisfy.jpg"),
           title: ["提高滿意度 堅持友善環境"],
           content: "Insist Hair Salon 美髮服務流程",
@@ -157,7 +172,7 @@ export default {
   },
   methods: {
     openGoogleMap() {
-      window.open("https://goo.gl/maps/8LshH4yWmTneMt2x8");
+      window.open("https://goo.gl/maps/2xSJttoMiGnaCK6JA");
     },
   },
   mounted() {},

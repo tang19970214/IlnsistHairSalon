@@ -1,8 +1,32 @@
 <template>
   <section class="w-full min-h-screen">
-    <div class="w-4/5 mx-auto text-black text-opacity-70">
+    <!-- header -->
+    <div class="w-full p-5 box-border bg-primary bg-opacity-60">
+      <div class="w-full flex flex-col items-start justify-center gap-1 md:gap-3 bg-white p-5 rounded-lg">
+        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center md:text-left">
+          <strong class="md:text-xl lg:text-3xl text-white">讓你頭皮健康的挑惕追求</strong>
+        </div>
+
+        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center md:text-left">
+          <strong class="text-xl md:text-3xl lg:text-6xl tracking-widest text-white">頂級頭皮養護工程</strong>
+        </div>
+
+        <div class="w-full relative">
+          <div class="relative left-4 md:left-8 lg:left-16 z-10 inline-block px-2 bg-white">
+            <p class="text-gray-500 md:text-lg lg:text-xl">往下看詳細介紹</p>
+          </div>
+          <div class="absolute left-0 top-1/2 w-full h-px border"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-4/5 lg:w-3/5 mx-auto text-black text-opacity-70 mt-2 mb-5">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
-        <img :src="require(`~/static/images/scalpcare/${item}.png`)" alt="頂級頭皮養護工程" v-for="item in 12" :key="item" data-aos="fade-up" data-aos-duration="600">
+        <div class="relative w-full h-full" v-for="i in 12" :key="i" data-aos="fade-up" data-aos-duration="600">
+          <img class="border" :src="require(`~/static/images/scalpcare/${i}.png`)" alt="頂級頭皮養護工程">
+
+          <div class="absolute top-2 left-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-400 text-white text-lg">{{i}}</div>
+        </div>
       </div>
     </div>
   </section>

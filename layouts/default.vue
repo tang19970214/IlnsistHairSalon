@@ -17,6 +17,10 @@
       </a>
     </div>
 
+    <a @click="goTop()" class="hidden md:block fixed right-3 bottom-10 p-4 bg-primary rounded-full shadow-lg border border-gray-100 cursor-pointer z-10 animate-bounce duration-500 hover:bg-gray-100" v-if="heightOverZero">
+      <img src="~/static/images/global/GoTop.svg" alt="GO TOP">
+    </a>
+
     <Nuxt class="pt-14 md:pt-16 lg:pt-32" />
     <Footer />
   </div>
