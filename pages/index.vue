@@ -6,7 +6,7 @@
 
     <div class="w-full py-5 lg:py-14 bg-[#F4F4F4]">
       <div class="w-full lg:w-4/5 px-5 lg:px-0 mx-auto flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        <img class="w-full lg:max-w-[600px]" src="~/static/images/home.jpg" alt="">
+        <img class="w-full lg:max-w-[600px]" src="~/static/images/home1.jpg" alt="">
         <div class="w-full flex items-start lg:pl-5 box-border">
           <!-- <label class="writing-vertical text-primary mr-2 lg:mx-8 text-xl rotate-180">Concept</label> -->
 

@@ -2,17 +2,17 @@
   <section class="w-full min-h-screen">
     <!-- header -->
     <div class="w-full p-5 box-border bg-primary bg-opacity-60">
-      <div class="w-full flex flex-col items-start justify-center gap-1 md:gap-3 bg-white p-5 rounded-lg">
-        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center md:text-left">
-          <strong class="md:text-xl lg:text-3xl text-white">讓你頭皮健康的挑惕追求</strong>
+      <div class="w-full flex flex-col items-center justify-center gap-1 md:gap-3 bg-white p-5 rounded-lg">
+        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center">
+          <strong class="md:text-xl lg:text-3xl text-white">讓妳頭皮健康的挑惕追求，我們不會停止</strong>
         </div>
 
-        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center md:text-left">
+        <div class="w-full md:w-auto px-10 py-2 bg-primary text-center">
           <strong class="text-xl md:text-3xl lg:text-6xl tracking-widest text-white">頂級頭皮養護工程</strong>
         </div>
 
-        <div class="w-full relative">
-          <div class="relative left-4 md:left-8 lg:left-16 z-10 inline-block px-2 bg-white">
+        <div class="w-full relative flex justify-center">
+          <div class="relative z-10 inline-block px-2 bg-white">
             <p class="text-gray-500 md:text-lg lg:text-xl">往下看詳細介紹</p>
           </div>
           <div class="absolute left-0 top-1/2 w-full h-px border"></div>
