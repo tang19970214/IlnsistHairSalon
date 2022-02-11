@@ -79,6 +79,13 @@
           <img class="w-full lg:w-auto lg:max-h-[500px]" :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000">
         </div>
       </div>
+
+      <!-- image introduce -->
+      <div class="w-full md:w-3/5 mx-auto px-4 md:px-0 box-border mb-5">
+        <!-- <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"> -->
+        <img class="w-full lg:w-auto" src="~/static/images/reservation/introduce.png" alt="" data-aos="fade-up" data-aos-duration="1000">
+        <!-- </div> -->
+      </div>
     </div>
   </section>
 </template>

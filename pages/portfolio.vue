@@ -9,7 +9,7 @@
       </div>
 
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 pt-3 pb-5">
-        <img class="w-full h-[350px] object-cover cursor-pointer duration-500 hover:opacity-80" :src="require(`~/static/images/portfolio/portfolio${i}.jpg`)" :alt="`作品集${i}`" v-for="i in 75" :key="i" @click="viewPic(i)" data-aos="fade-up" data-aos-duration="1000">
+        <img class="w-full h-[350px] object-cover cursor-pointer duration-500 hover:opacity-80" :src="require(`~/static/images/portfolio/portfolio${i}.jpg`)" :alt="`作品集${i}`" v-for="i in 105" :key="i" @click="viewPic(i)" data-aos="fade-up" data-aos-duration="1000">
       </div>
 
       <div class="w-full lg:px-10 lg:box-border flex flex-col md:flex-row items-center justify-center md:justify-around gap-3 pt-10 pb-16" data-aos="fade-up" data-aos-duration="1000">

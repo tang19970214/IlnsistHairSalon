@@ -20,6 +20,13 @@
       </div>
     </div>
 
+    <!-- introduce -->
+    <div class="w-4/5 lg:w-3/5 mx-auto mb-3">
+      <img class="w-full" src="~/static/images/scalpcare/youKnow.png" alt="">
+      <img class="w-full" src="~/static/images/scalpcare/hairFollicle.png" alt="" data-aos="fade-up" data-aos-duration="600">
+    </div>
+
+    <!-- story -->
     <div class="w-4/5 lg:w-3/5 mx-auto text-black text-opacity-70 mt-2 mb-5">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
         <div class="relative w-full h-full" v-for="i in 12" :key="i" data-aos="fade-up" data-aos-duration="600">
