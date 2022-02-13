@@ -4,7 +4,7 @@
     <div class="w-full p-5 box-border bg-primary bg-opacity-60">
       <div class="w-full flex flex-col items-center justify-center gap-1 md:gap-3 bg-white p-5 rounded-lg">
         <div class="w-full md:w-auto px-10 py-2 bg-primary text-center">
-          <strong class="md:text-xl lg:text-3xl text-white">讓妳頭皮健康的挑惕追求，我們不會停止</strong>
+          <strong class="md:text-xl lg:text-3xl text-white">對妳頭皮健康的挑惕追求，我們不會停止</strong>
         </div>
 
         <div class="w-full md:w-auto px-10 py-2 bg-primary text-center">
@@ -30,7 +30,7 @@
     <div class="w-4/5 lg:w-3/5 mx-auto text-black text-opacity-70 mt-2 mb-5">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
         <div class="relative w-full h-full" v-for="i in 12" :key="i" data-aos="fade-up" data-aos-duration="600">
-          <img class="border" :src="require(`~/static/images/scalpcare/${i}.png`)" alt="頂級頭皮養護工程">
+          <img class="border p-1" :src="require(`~/static/images/scalpcare/${i}.png`)" alt="頂級頭皮養護工程">
 
           <div class="absolute top-2 left-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-400 text-white text-lg">{{i}}</div>
         </div>
