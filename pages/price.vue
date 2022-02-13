@@ -37,7 +37,7 @@
               </li>
               <li class="flex items-center">➌ LINE PAY<p class="text-primary text-sm ml-2">※不限金額且免手續費</p>
               </li>
-              <li class="flex items-center">➍ 五倍券+新北加倍券<p class="text-primary text-sm ml-2">※可找零</p>
+              <li class="flex items-center">➍ 五倍券+新北加倍券
               </li>
             </ul>
           </div>
