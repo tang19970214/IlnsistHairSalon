@@ -5,7 +5,7 @@
       <div class="w-full p-5 box-border bg-primary bg-opacity-60">
         <div class="w-full flex flex-col items-center justify-center bg-white p-5 rounded-lg">
           <div class="w-full flex items-center justify-center flex-wrap gap-2 tracking-widest">
-            <img src="~/static/images/reservation/line.png" alt="LINE" width="80px">
+            <img src="~/static/images/reservation/line.png" alt="LINE" width="80px" />
             <h2 class="text-xl lg:text-3xl">立刻<strong>線上預約</strong></h2>
             <div class="relative">
               <h3 class="text-lg lg:text-2xl">讓你變美很簡單</h3>
@@ -16,9 +16,9 @@
           <div class="w-full mt-4 flex flex-col lg:flex-row items-center justify-center gap-3 lg:justify-around text-gray-500">
             <div class="flex items-center justify-around">
               <div class="relative w-[25%] lg:w-[20%]" v-for="item in iconList.left" :key="item.id">
-                <img class="w-full" :src="require(`~/static/images/reservation/${item.imgName}.png`)" :alt="item.title">
+                <img class="w-full" :src="require(`~/static/images/reservation/${item.imgName}.png`)" :alt="item.title" />
                 <div class="absolute -bottom-3 w-full text-center">
-                  <p class="text-gray-500 text-sm lg:text-base whitespace-nowrap truncate">{{item.title}}</p>
+                  <p class="text-gray-500 text-sm lg:text-base whitespace-nowrap truncate">{{ item.title }}</p>
                 </div>
               </div>
             </div>
@@ -28,9 +28,9 @@
             </ul>
             <div class="flex items-center justify-around">
               <div class="relative w-[25%] lg:w-[20%]" v-for="item in iconList.right" :key="item.id">
-                <img class="w-full" :src="require(`~/static/images/reservation/${item.imgName}.png`)" :alt="item.title">
+                <img class="w-full" :src="require(`~/static/images/reservation/${item.imgName}.png`)" :alt="item.title" />
                 <div class="absolute -bottom-3 w-full text-center">
-                  <p class="text-gray-500 text-sm lg:text-base whitespace-nowrap truncate">{{item.title}}</p>
+                  <p class="text-gray-500 text-sm lg:text-base whitespace-nowrap truncate">{{ item.title }}</p>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
       <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mt-6 flex flex-col md:flex-row items-center gap-3">
         <div class="w-40 flex flex-col items-center justify-center gap-1 whitespace-nowrap">
           <span class="w-36 h-36 mb-2 rounded-full shadow-lg bg-primary bg-opacity-80 flex items-center justify-center">
-            <img class="w-32" src="~/static/images/LOGO-dark.png" alt="">
+            <img class="w-32" src="~/static/images/LOGO-dark.png" alt="" />
           </span>
           <label>Insist Hair Salon</label>
           <p>線上預約查詢專用</p>
@@ -50,7 +50,7 @@
 
         <div class="flex items-center flex-wrap gap-2" data-aos="fade-up" data-aos-duration="1000">
           <div class="border border-primary rounded-xl bg-white p-2 md:p-4 text-primary" v-for="(title, idx) in stepList" :key="idx">
-            <strong class="md:text-lg lg:text-xl">{{idx+1}}. {{title}}</strong>
+            <strong class="md:text-lg lg:text-xl">{{ idx + 1 }}. {{ title }}</strong>
           </div>
         </div>
       </div>
@@ -62,10 +62,10 @@
             <div class="w-full h-[2px] bg-[#56A033]"></div>
             <strong>LINE@ <label class="text-black text-opacity-80 font-light">@871dlyrt</label></strong>
           </div>
-          <img class="w-24 lg:w-28" src="~/static/images/reservation/lineQrcode.png" alt="QR code">
+          <img class="w-24 lg:w-28" src="~/static/images/reservation/lineQrcode.png" alt="QR code" />
         </div>
 
-        <img class="max-w-[300px]" src="~/static/images/reservation/person.png" alt="">
+        <img class="max-w-[300px]" src="~/static/images/reservation/person.png" alt="" />
 
         <div class="w-full md:w-auto lg:max-w-[300px] flex flex-col md:text-lg lg:text-xl text-center lg:text-left">
           <p>歡迎加入我們的線上預約系統！</p>
@@ -76,13 +76,13 @@
       <!-- image process -->
       <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mb-5">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-          <img class="w-full lg:w-auto lg:max-h-[500px]" :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000">
+          <img class="w-full lg:w-auto lg:max-h-[500px]" :src="require(`~/static/images/reservation/pic${i}.jpg`)" alt="" v-for="i in 3" :key="i" data-aos="fade-up" data-aos-duration="1000" />
         </div>
       </div>
 
       <!-- image introduce -->
       <div class="w-full md:w-3/5 mx-auto px-4 md:px-0 box-border mb-5">
-        <img class="w-full lg:w-auto" src="~/static/images/reservation/introduce.png" alt="" data-aos="fade-up" data-aos-duration="1000">
+        <img class="w-full lg:w-auto" src="~/static/images/reservation/introduce.png" alt="" data-aos="fade-up" data-aos-duration="1000" />
       </div>
     </div>
   </section>
@@ -90,14 +90,15 @@
 
 <script>
 export default {
+  name: "ReservationPage",
+  head() {
+    return {
+      title: "InsistHairSalon｜預約方式",
+    };
+  },
   data() {
     return {
-      stepList: [
-        "加入Line@",
-        "進入聊天界面",
-        "輸入：可以預約嗎？",
-        "洽談後成功預約",
-      ],
+      stepList: ["加入Line@", "進入聊天界面", "輸入：可以預約嗎？", "洽談後成功預約"],
       iconList: {
         left: [
           { id: 1, imgName: "onlineInquiry", title: "線上預約" },

@@ -22,19 +22,30 @@
 
     <!-- introduce -->
     <div class="w-4/5 lg:w-3/5 mx-auto mb-3">
-      <img class="w-full" src="~/static/images/scalpcare/youKnow.png" alt="">
-      <img class="w-full" src="~/static/images/scalpcare/hairFollicle.png" alt="" data-aos="fade-up" data-aos-duration="600">
+      <img class="w-full" src="~/static/images/scalpcare/youKnow.png" alt="" />
+      <img class="w-full" src="~/static/images/scalpcare/hairFollicle.png" alt="" data-aos="fade-up" data-aos-duration="600" />
     </div>
 
     <!-- story -->
     <div class="w-4/5 lg:w-3/5 mx-auto text-black text-opacity-70 mt-2 mb-5">
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
         <div class="relative w-full h-full" v-for="i in 12" :key="i" data-aos="fade-up" data-aos-duration="600">
-          <img class="border p-1" :src="require(`~/static/images/scalpcare/${i}.png`)" alt="頂級頭皮養護工程">
+          <img class="border p-1" :src="require(`~/static/images/scalpcare/${i}.png`)" alt="頂級頭皮養護工程" />
 
-          <div class="absolute top-2 left-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-400 text-white text-lg">{{i}}</div>
+          <div class="absolute top-2 left-2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-400 text-white text-lg">{{ i }}</div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  name: "ScalpcarePage",
+  head() {
+    return {
+      title: "InsistHairSalon｜頂級頭皮養護工程",
+    };
+  },
+};
+</script>

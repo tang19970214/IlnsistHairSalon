@@ -29,8 +29,8 @@
             <label class="mb-1 md:text-lg">請問您的性別？</label>
             <div class="w-full h-10 flex items-center flex-wrap gap-3">
               <div class="flex items-center" v-for="(item, idx) in options" :key="idx">
-                <input v-model="temp.sex" :id="idx" type="radio" :value="item.value" class="mr-1" required>
-                <label class="font-medium tracking-wider" :for="idx">{{item.label}}</label>
+                <input v-model="temp.sex" :id="idx" type="radio" :value="item.value" class="mr-1" required />
+                <label class="font-medium tracking-wider" :for="idx">{{ item.label }}</label>
               </div>
             </div>
           </div>
@@ -111,6 +111,12 @@ const formTemplate = {
 };
 
 export default {
+  name: "RecruitmentPage",
+  head() {
+    return {
+      title: "InsistHairSalon｜人才招募",
+    };
+  },
   data() {
     return {
       temp: JSON.parse(JSON.stringify(formTemplate)),
@@ -143,18 +149,13 @@ export default {
       bodyFormData.set("fvv", 1);
 
       await axios
-        .post(
-          "https://docs.google.com/forms/u/0/d/e/1FAIpQLSchzw86Rs7DMaZ8e0u4hEEUrJ8ONdPiZvtR-6vUHhQCQAL4vA/formResponse",
-          bodyFormData,
-          { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
-        )
+        .post("https://docs.google.com/forms/u/0/d/e/1FAIpQLSchzw86Rs7DMaZ8e0u4hEEUrJ8ONdPiZvtR-6vUHhQCQAL4vA/formResponse", bodyFormData, { headers: { "Content-Type": "application/x-www-form-urlencoded" } })
         .then(() => {
           this.temp = JSON.parse(JSON.stringify(formTemplate));
           this.$swal.fire({
             icon: "success",
             iconColor: "#e8a19e",
-            title:
-              "我們已經收到您的應徵資訊囉～近日請隨時注意您的手機，感謝您！",
+            title: "我們已經收到您的應徵資訊囉～近日請隨時注意您的手機，感謝您！",
             showConfirmButton: true,
             confirmButtonText: "確認",
             confirmButtonColor: "#e8a19e",
@@ -166,8 +167,7 @@ export default {
           this.$swal.fire({
             icon: "success",
             iconColor: "#e8a19e",
-            title:
-              "我們已經收到您的應徵資訊囉～近日請隨時注意您的手機，感謝您！",
+            title: "我們已經收到您的應徵資訊囉～近日請隨時注意您的手機，感謝您！",
             showConfirmButton: true,
             confirmButtonText: "確認",
             confirmButtonColor: "#e8a19e",

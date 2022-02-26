@@ -1,6 +1,6 @@
 <template>
   <section class="w-full min-h-screen">
-    <img class="w-full" src="~/static/images/portfolio/portfolio_header.jpg" alt="作品集">
+    <img class="w-full" src="~/static/images/portfolio/portfolio_header.jpg" alt="作品集" />
 
     <div class="w-5/6 lg:w-4/5 mx-auto text-black text-opacity-70">
       <!-- title -->
@@ -9,7 +9,7 @@
       </div>
 
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 pt-3 pb-5">
-        <img class="w-full h-[350px] object-cover cursor-pointer duration-500 hover:opacity-80" :src="require(`~/static/images/portfolio/portfolio${i}.jpg`)" :alt="`作品集${i}`" v-for="i in 105" :key="i" @click="viewPic(i)" data-aos="fade-up" data-aos-duration="1000">
+        <img class="w-full h-[350px] object-cover cursor-pointer duration-500 hover:opacity-80" :src="require(`~/static/images/portfolio/portfolio${i}.jpg`)" :alt="`作品集${i}`" v-for="i in 105" :key="i" @click="viewPic(i)" data-aos="fade-up" data-aos-duration="1000" />
       </div>
 
       <div class="w-full lg:px-10 lg:box-border flex flex-col md:flex-row items-center justify-center md:justify-around gap-3 pt-10 pb-16" data-aos="fade-up" data-aos-duration="1000">
@@ -25,7 +25,7 @@
 
     <Modal title="預覽圖片" width="w-auto" :openModal="openPicModal" @closeModal="openPicModal = false">
       <div class="w-full flex items-center justify-center py-2">
-        <img class="w-auto max-h-[80vh]" :src="previewPic" alt="">
+        <img class="w-auto max-h-[80vh]" :src="previewPic" alt="" />
       </div>
     </Modal>
   </section>
@@ -34,6 +34,11 @@
 <script>
 export default {
   name: "PortfolioPage",
+  head() {
+    return {
+      title: "InsistHairSalon｜案例作品集",
+    };
+  },
   data() {
     return {
       openPicModal: false,
