@@ -8,10 +8,7 @@
       <div class="w-full lg:w-4/5 px-5 lg:px-0 mx-auto flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <img class="w-full lg:max-w-[600px]" src="~/static/images/home1.jpg" alt="" />
         <div class="w-full flex items-start lg:pl-5 box-border">
-          <!-- <label class="writing-vertical text-primary mr-2 lg:mx-8 text-xl rotate-180">Concept</label> -->
-
           <div class="flex flex-col mt-2">
-            <!-- <strong class="text-lg lg:text-xl text-black text-opacity-60 mb-2">（標題）</strong> -->
             <div class="inline-block mb-2">
               <img class="w-auto h-10" src="~/static/images/LOGO.png" alt="INSIST HAIR SALON" />
             </div>
@@ -41,8 +38,6 @@
           <ul class="list-disc pl-5" v-if="item.contents">
             <li class="text-black text-opacity-40 tracking-wider leading-7" v-for="(txt, idx) in item.contents" :key="idx">{{ txt }}</li>
           </ul>
-          <!-- <p class="text-black text-opacity-40 tracking-wider leading-7" v-if="item.desc">{{item.desc}}</p>
-          <p class="text-primary tracking-wider leading-7" v-if="item.notice">{{item.notice}}</p> -->
         </div>
       </div>
     </div>
@@ -58,23 +53,23 @@
     </div>
 
     <!-- Recommendations 好評分享 -->
-    <!-- <div class="w-full mt-5">
+    <div class="w-full mt-5">
       <div class="w-full pt-16 md:pt-20 pb-32 bg-primary flex items-start justify-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-        <strong class="text-white text-xl md:text-2xl">Recommendations</strong>
+        <!-- <strong class="text-white text-xl md:text-2xl">Recommendations</strong> -->
         <strong class="text-white text-xl md:text-2xl">好評分享</strong>
       </div>
 
       <div class="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 translate-y-[-90px]">
-        <div class="w-full flex items-center justify-center" v-for="item in 6" :key="item" data-aos="fade-up" data-aos-duration="1500">
-          <div class="relative">
-            <img src="~/static/images/Recommendations.png" alt="">
+        <div class="w-full flex items-center justify-center" v-for="item in praiseList" :key="item.id" data-aos="fade-up" data-aos-duration="1500">
+          <div @click="goPath(item.url)" class="w-full relative overflow-hidden cursor-pointer">
+            <img :src="item.imgUrl" alt="" class="w-full h-60 object-cover duration-500 hover:scale-125" />
             <div class="absolute left-0 bottom-0 z-10 w-full p-3 box-border bg-white bg-opacity-50">
-              <p class="text-sm">【中和髮廊】漂染髮推薦～來自日本的MEE.JAPAN，冷色調漸層手刷染，染髮不分長短1000元均一價！</p>
+              <p class="text-sm">{{ item.label }}</p>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- address -->
     <div class="w-full flex flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">
@@ -143,11 +138,29 @@ export default {
         },
       ],
       stylesList: [{ id: 1, imgUrl: require("~/static/images/styles/styles1.png") }],
+
+      /* 好評分享 */
+      praiseList: [
+        { id: 1, label: "府中髮廊推薦【Insist Hair Salon】燙染不分長短只要1000元 | 小資族最愛超高CP值髮廊 | 剪 燙 染 護都沒問題喔", imgUrl: require("~/static/images/praise/praise1.jpeg"), url: "https://reurl.cc/601KXb" },
+        { id: 2, label: "【板橋美髮】Insist Hair Salon府中髮廊 染燙不分長度只要1000 頂級OLAPEX護髮結構修護", imgUrl: require("~/static/images/praise/praise2.jpeg"), url: "https://reurl.cc/eOeV4Q" },
+        { id: 3, label: "板橋府中美髮推薦｜InsistHairSalon染燙不分長短只要1000元｜女神頂級護髮｜板橋府中染髮｜板橋", imgUrl: require("~/static/images/praise/praise3.png"), url: "https://reurl.cc/NRkNd9" },
+        { id: 4, label: "『板橋髮廊推薦Insist Hair Salon』府中商圈平價染燙髮一律1000元，小資族推薦髮廊", imgUrl: require("~/static/images/praise/praise4.jpeg"), url: "https://reurl.cc/zNvKay" },
+        { id: 5, label: "板橋府中美髮推薦｜板橋府中染髮｜InsistHairSalon｜OLAPEX 1+2劑深層結構護髮｜燙染ㄧ律1000元不分長短CP值超高", imgUrl: require("~/static/images/praise/praise5.jpeg"), url: "https://reurl.cc/jGNmKp" },
+        { id: 6, label: "【美髮】新北板橋「lnsist Hair Salon府中店」板橋平價髮廊推薦，燙、染不分長短均一價!", imgUrl: require("~/static/images/praise/praise6.png"), url: "https://reurl.cc/NRkNep" },
+        { id: 7, label: "板橋府中美髮推薦｜髮廊推薦｜板橋府中染髮 ｜InsistHairSalon ｜染燙不分長短只要1000元｜護髮產品CP值超高｜美髮造型", imgUrl: require("~/static/images/praise/praise7.png"), url: "https://reurl.cc/eOeVNx" },
+        { id: 8, label: "（府中髮廊）lnsist Hair Salon府中店～2022新開幕板橋髮廊！平價護髮、染髮好選擇！", imgUrl: require("~/static/images/praise/praise8.jpeg"), url: "https://reurl.cc/0X5arb" },
+        { id: 9, label: "【染護髮】春天來了 櫻花系染髮 日本鉑金護髮 INSIST HAIR SALON 板橋府中站特殊染髮護髮推薦", imgUrl: require("~/static/images/praise/praise9.jpeg"), url: "https://reurl.cc/QbyVM5" },
+        { id: 10, label: "（板橋染髮）insist Hair Salon板橋府中店～2022新開幕染髮好選擇！一千元不分長短超高CP值！", imgUrl: require("~/static/images/praise/praise10.jpeg"), url: "https://reurl.cc/MNaMp3" },
+        { id: 11, label: "板橋府中髮廊推薦｜平價髮廊｜InsistHairSalon｜日本鉑金護髮｜燙染一律1000元不分長短CP值超高│天界之舟 行善濟世", imgUrl: require("~/static/images/praise/praise11.png"), url: "https://reurl.cc/XVdadj" },
+      ],
     };
   },
   methods: {
     openGoogleMap() {
       window.open("https://goo.gl/maps/2xSJttoMiGnaCK6JA");
+    },
+    goPath(url) {
+      window.open(url);
     },
   },
   mounted() {},
