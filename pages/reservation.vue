@@ -42,7 +42,7 @@
       <div class="w-full md:w-4/5 mx-auto px-4 md:px-0 box-border mt-6 flex flex-col md:flex-row items-center gap-3">
         <div class="w-40 flex flex-col items-center justify-center gap-1 whitespace-nowrap">
           <span class="w-36 h-36 mb-2 rounded-full shadow-lg bg-primary bg-opacity-80 flex items-center justify-center">
-            <img class="w-32" src="~/static/images/LOGO-dark.png" alt="" />
+            <img class="w-32" src="~/static/images/LOGO_dark.png" alt="" />
           </span>
           <label>Insist Hair Salon</label>
           <p>線上預約查詢專用</p>

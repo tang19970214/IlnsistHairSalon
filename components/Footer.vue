@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-primary py-8 lg:py-16 flex flex-col items-center justify-center">
-    <img class="h-20" src="~/static/images/LOGO-dark.png" alt="">
+    <img class="w-[200px] mb-1" src="~/static/images/LOGO_dark.png" alt="">
     <div class="flex items-center justify-center gap-4 mt-2">
       <a href="https://www.facebook.com/salon29590801" target="_blank">
         <img src="~/static/images/facebook.svg" alt="FACEBOOK">
