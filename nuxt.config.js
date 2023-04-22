@@ -54,7 +54,7 @@ export default {
 
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].js'
     }
   }
 }
