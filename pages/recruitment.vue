@@ -114,7 +114,7 @@ export default {
   name: "RecruitmentPage",
   head() {
     return {
-      title: "InsistHairSalon｜人才招募",
+      title: "llnsist’s Hair Salon｜人才招募",
     };
   },
   data() {

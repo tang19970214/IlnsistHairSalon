@@ -10,13 +10,13 @@
         <img class="w-full lg:max-w-[600px]" src="~/static/images/home1.jpg" alt="" />
         <div class="w-full flex flex-col justify-around lg:pl-5">
           <div class="inline-block mb-2">
-            <img class="w-auto h-10" src="~/static/images/LOGO.png" alt="INSIST HAIR SALON" />
+            <img class="w-auto h-10" src="~/static/images/LOGO.png" alt="llnsist’s Hair Salon" />
           </div>
           <p class="text-black text-opacity-40 tracking-widest leading-7 mb-1">
-            集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，不斷的自我成長[堅持]走在流行尖端是基本態度，善於溝通與傾聽，你不一定要花到很多錢找名師，在lnsist Hair
+            集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，不斷的自我成長[堅持]走在流行尖端是基本態度，善於溝通與傾聽，你不一定要花到很多錢找名師，在llnsist's Hair
             Salon，沒有誇張的手法，讓一切回歸髮廊最貼近妳生活，[堅持]變美變得更簡單無壓力，以歐洲的手刷染、日韓的燙髮以及台灣剪裁，讓我們帶著你輕消費。</p>
           <p class="text-black text-opacity-40 tracking-widest leading-7">
-            經營理念：所有項目不分長短均一價，全台CP值首選髮廊，染燙使用原裝歐盟進口染膏、萊雅進口染膏、哥德式、歌葳、OLAPLEX結構護。</p>
+            經營理念：所有項目不分長短度，全台CP值首選髮廊，染燙使用原裝歐盟進口染膏、萊雅進口染膏、哥德式、歌葳、OLAPLEX結構護。</p>
           <p class="text-black text-opacity-40 tracking-widest leading-7">沙龍產品.品質保證，『堅持』消費體驗無壓力。</p>
           <strong class="text-primary tracking-widest leading-7 pt-3"> *若發生未經告知額外加價之情形，顧客有權拒絕消費 </strong>
         </div>
@@ -27,7 +27,7 @@
     <div class="w-full flex flex-col" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
       <div
         class="w-full py-3 lg:py-5 mb-5 lg:mb-0 border-b border-[#c4c4c4] flex flex-col items-center justify-center text-xl lg:text-3xl">
-        <strong class="text-[#C1AC7A] text-center">Insist Hair Salon的堅持</strong>
+        <strong class="text-[#C1AC7A] text-center">llnsist’s Hair Salon的堅持</strong>
       </div>
     </div>
 
@@ -125,12 +125,12 @@ export default {
   name: "IndexPage",
   head() {
     return {
-      title: "InsistHairSalon｜首頁",
+      title: "llnsist’s Hair Salon｜首頁",
       meta: [
-        { hid: "og:title", property: "og:title", content: "InsistHairSalon｜板橋美髮沙龍" },
+        { hid: "og:title", property: "og:title", content: "llnsist’s Hair Salon｜板橋美髮沙龍" },
         { hid: "description", name: "description", content: "集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，沙龍產品.品質保證，『堅持』消費體驗無壓力。" },
         { hid: "og:description", property: "og:description", content: "集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，沙龍產品.品質保證，『堅持』消費體驗無壓力。" },
-        { name: "keywords", content: "Insist Hair Salon, 板橋美髮推薦, 板橋髮廊推薦, 板橋蓬鬆燙, 板橋韓式歐巴燙, 板橋男式剪髮, 板橋設計染, 板橋剪髮推薦, 板橋高CP值美髮, 府中髮廊推薦, 府中美髮推薦" },
+        { name: "keywords", content: "llnsist’s Hair Salon, 板橋美髮推薦, 板橋髮廊推薦, 板橋蓬鬆燙, 板橋韓式歐巴燙, 板橋男式剪髮, 板橋設計染, 板橋剪髮推薦, 板橋高CP值美髮, 府中髮廊推薦, 府中美髮推薦" },
       ],
     };
   },
@@ -147,13 +147,13 @@ export default {
           id: 2,
           imgUrl: require("~/static/images/cut.jpg"),
           title: [],
-          contents: ["消費項目價格清楚透明", "所有項目不分長短均一價", "所有項目皆包含洗髮", "價目表公開透明,不隨意加價", "產品都經過衛生署核准,合法安全", "若發生未經告知額外加價之情形，顧客有權拒絕消費"],
+          contents: ["消費項目價格清楚透明", "所有項目不分長短度", "所有項目皆包含洗髮", "價目表公開透明,不隨意加價", "產品都經過衛生署核准,合法安全", "若發生未經告知額外加價之情形，顧客有權拒絕消費"],
         },
         {
           id: 3,
           imgUrl: require("~/static/images/satisfy.jpg"),
           title: ["提高滿意度 堅持友善環境"],
-          content: "Insist Hair Salon 美髮服務流程",
+          content: "llnsist’s Hair Salon 美髮服務流程",
           contents: ["確認預約資訊", "實名制消毒與量體溫", "將客戶帶到服務座位", "設計師確認當日需求", "執行服務內容", "收取當日費用"],
         },
       ],
@@ -161,17 +161,17 @@ export default {
 
       /* 好評分享 */
       praiseList: [
-        { id: 1, label: "府中髮廊推薦【Insist Hair Salon】燙染不分長短只要1000元 | 小資族最愛超高CP值髮廊 | 剪 燙 染 護都沒問題喔", imgUrl: require("~/static/images/praise/praise1.jpeg"), url: "https://reurl.cc/601KXb" },
-        { id: 2, label: "【板橋美髮】Insist Hair Salon府中髮廊 染燙不分長度只要1000 頂級OLAPEX護髮結構修護", imgUrl: require("~/static/images/praise/praise2.jpeg"), url: "https://reurl.cc/eOeV4Q" },
-        { id: 3, label: "板橋府中美髮推薦｜InsistHairSalon染燙不分長短只要1000元｜女神頂級護髮｜板橋府中染髮｜板橋", imgUrl: require("~/static/images/praise/praise3.png"), url: "https://reurl.cc/NRkNd9" },
-        { id: 4, label: "『板橋髮廊推薦Insist Hair Salon』府中商圈平價染燙髮一律1000元，小資族推薦髮廊", imgUrl: require("~/static/images/praise/praise4.jpeg"), url: "https://reurl.cc/zNvKay" },
-        { id: 5, label: "板橋府中美髮推薦｜板橋府中染髮｜InsistHairSalon｜OLAPEX 1+2劑深層結構護髮｜燙染ㄧ律1000元不分長短CP值超高", imgUrl: require("~/static/images/praise/praise5.jpeg"), url: "https://reurl.cc/jGNmKp" },
+        { id: 1, label: "府中髮廊推薦【llnsist’s Hair Salon】燙染不分長短只要1000元 | 小資族最愛超高CP值髮廊 | 剪 燙 染 護都沒問題喔", imgUrl: require("~/static/images/praise/praise1.jpeg"), url: "https://reurl.cc/601KXb" },
+        { id: 2, label: "【板橋美髮】llnsist’s Hair Salon府中髮廊 染燙不分長度只要1000 頂級OLAPEX護髮結構修護", imgUrl: require("~/static/images/praise/praise2.jpeg"), url: "https://reurl.cc/eOeV4Q" },
+        { id: 3, label: "板橋府中美髮推薦｜llnsist’s Hair Salon染燙不分長短只要1000元｜女神頂級護髮｜板橋府中染髮｜板橋", imgUrl: require("~/static/images/praise/praise3.png"), url: "https://reurl.cc/NRkNd9" },
+        { id: 4, label: "『板橋髮廊推薦llnsist’s Hair Salon』府中商圈平價染燙髮一律1000元，小資族推薦髮廊", imgUrl: require("~/static/images/praise/praise4.jpeg"), url: "https://reurl.cc/zNvKay" },
+        { id: 5, label: "板橋府中美髮推薦｜板橋府中染髮｜llnsist’s Hair Salon｜OLAPEX 1+2劑深層結構護髮｜燙染ㄧ律1000元不分長短CP值超高", imgUrl: require("~/static/images/praise/praise5.jpeg"), url: "https://reurl.cc/jGNmKp" },
         { id: 6, label: "【美髮】新北板橋「lnsist Hair Salon府中店」板橋平價髮廊推薦，燙、染不分長短均一價!", imgUrl: require("~/static/images/praise/praise6.png"), url: "https://reurl.cc/NRkNep" },
-        { id: 7, label: "板橋府中美髮推薦｜髮廊推薦｜板橋府中染髮 ｜InsistHairSalon ｜染燙不分長短只要1000元｜護髮產品CP值超高｜美髮造型", imgUrl: require("~/static/images/praise/praise7.png"), url: "https://reurl.cc/eOeVNx" },
+        { id: 7, label: "板橋府中美髮推薦｜髮廊推薦｜板橋府中染髮 ｜llnsist’s Hair Salon ｜染燙不分長短只要1000元｜護髮產品CP值超高｜美髮造型", imgUrl: require("~/static/images/praise/praise7.png"), url: "https://reurl.cc/eOeVNx" },
         { id: 8, label: "（府中髮廊）lnsist Hair Salon府中店～2022新開幕板橋髮廊！平價護髮、染髮好選擇！", imgUrl: require("~/static/images/praise/praise8.jpeg"), url: "https://reurl.cc/0X5arb" },
-        { id: 9, label: "【染護髮】春天來了 櫻花系染髮 日本鉑金護髮 INSIST HAIR SALON 板橋府中站特殊染髮護髮推薦", imgUrl: require("~/static/images/praise/praise9.jpeg"), url: "https://reurl.cc/QbyVM5" },
-        { id: 10, label: "（板橋染髮）insist Hair Salon板橋府中店～2022新開幕染髮好選擇！一千元不分長短超高CP值！", imgUrl: require("~/static/images/praise/praise10.jpeg"), url: "https://reurl.cc/MNaMp3" },
-        { id: 11, label: "板橋府中髮廊推薦｜平價髮廊｜InsistHairSalon｜日本鉑金護髮｜燙染一律1000元不分長短CP值超高│天界之舟 行善濟世", imgUrl: require("~/static/images/praise/praise11.png"), url: "https://reurl.cc/XVdadj" },
+        { id: 9, label: "【染護髮】春天來了 櫻花系染髮 日本鉑金護髮 llnsist’s Hair Salon 板橋府中站特殊染髮護髮推薦", imgUrl: require("~/static/images/praise/praise9.jpeg"), url: "https://reurl.cc/QbyVM5" },
+        { id: 10, label: "（板橋染髮）llnsist’s Hair Salon板橋府中店～2022新開幕染髮好選擇！一千元不分長短超高CP值！", imgUrl: require("~/static/images/praise/praise10.jpeg"), url: "https://reurl.cc/MNaMp3" },
+        { id: 11, label: "板橋府中髮廊推薦｜平價髮廊｜llnsist’s Hair Salon｜日本鉑金護髮｜燙染一律1000元不分長短CP值超高│天界之舟 行善濟世", imgUrl: require("~/static/images/praise/praise11.png"), url: "https://reurl.cc/XVdadj" },
       ],
     };
   },

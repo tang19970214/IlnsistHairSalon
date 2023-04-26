@@ -1,4 +1,4 @@
-# insistHairSalon
+# llnsist’s Hair Salon
 
 ## Build Setup
 

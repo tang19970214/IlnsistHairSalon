@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <img class="h-12 md:h-14 lg:h-16" :class="{ 'cursor-pointer': $route.path !== '/' }" src="~/static/images/LOGO.png" alt="INSIST HAIR SALON" @click="$router.push('/')" />
+      <img class="h-12 md:h-14 lg:h-16" :class="{ 'cursor-pointer': $route.path !== '/' }" src="~/static/images/LOGO.png" alt="llnsist’s Hair Salon" @click="$router.push('/')" />
 
       <!-- <div class="flex items-center gap-2"> -->
       <div class="hidden md:block pr-4 lg:pr-0 absolute right-9 lg:right-15">

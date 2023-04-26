@@ -44,7 +44,7 @@ export default {
   name: "ScalpcarePage",
   head() {
     return {
-      title: "InsistHairSalon｜頂級頭皮養護工程",
+      title: "llnsist’s Hair Salon｜頂級頭皮養護工程",
     };
   },
 };

@@ -14,10 +14,10 @@
           <div class="w-full py-3">
             <ul class="list-none">
               <li>➊ 輕鬆無壓力、價格透明、輕消費</li>
-              <li>➋ 所有項目都有包含免費洗髮</li>
-              <li>➌ 所有價格皆與顧客確認完畢之後才開始操作，剪、染、燙髮皆包含基礎瞬間護髮</li>
+              <li>➋ 燙、染、護都有包含免費洗髮</li>
+              <li>➌ 所有價格皆與顧客確認完畢之後才開始操作，剪、染、燙髮皆包含基礎潤絲</li>
               <li>➍ 不提供自備染膏及藥水的服務</li>
-              <li>➎ 所有項目完全不分長短均一價</li>
+              <li>➎ 所有項目完全不分長短度</li>
             </ul>
             <div class="w-full text-primary pt-2">
               <p>※若發生金額不在構通內加價的情況，顧客有權拒絕付款</p>
@@ -41,7 +41,6 @@
                 ➌ LINE PAY
                 <p class="text-primary text-sm ml-2">※不限金額且免手續費</p>
               </li>
-              <li class="flex items-center">➍ 五倍券+新北加倍券</li>
             </ul>
           </div>
         </div>
@@ -55,7 +54,7 @@ export default {
   name: "PricePage",
   head() {
     return {
-      title: "InsistHairSalon｜價目表",
+      title: "llnsist’s Hair Salon｜價目表",
     };
   },
   data() {

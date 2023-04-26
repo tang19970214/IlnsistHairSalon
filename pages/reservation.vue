@@ -44,7 +44,7 @@
           <span class="w-36 h-36 mb-2 rounded-full shadow-lg bg-primary bg-opacity-80 flex items-center justify-center">
             <img class="w-32" src="~/static/images/LOGO_dark.png" alt="" />
           </span>
-          <label>Insist Hair Salon</label>
+          <label>llnsist’s Hair Salon</label>
           <p>線上預約查詢專用</p>
         </div>
 
@@ -93,7 +93,7 @@ export default {
   name: "ReservationPage",
   head() {
     return {
-      title: "InsistHairSalon｜預約方式",
+      title: "llnsist’s Hair Salon｜預約方式",
     };
   },
   data() {

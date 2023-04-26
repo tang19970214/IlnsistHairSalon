@@ -1,10 +1,9 @@
 export default {
   router: {
-    // base: "/InsistHairSalon/",
     scrollBehavior: () => ({y: 0}),
   },
   head: {
-    title: 'InsistHairSalon',
+    title: 'llnsist’s Hair Salon',
     htmlAttrs: {
       lang: 'en'
     },

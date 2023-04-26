@@ -36,7 +36,7 @@ export default {
   name: "PortfolioPage",
   head() {
     return {
-      title: "InsistHairSalon｜案例作品集",
+      title: "llnsist’s Hair Salon｜案例作品集",
     };
   },
   data() {
