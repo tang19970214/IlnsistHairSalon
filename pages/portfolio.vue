@@ -49,7 +49,7 @@ export default {
   methods: {
     getList() {
       let arr = [];
-      for (let i = 1; i <= 150; i++) {
+      for (let i = 1; i <= 175; i++) {
         arr.push(i);
       }
       // 亂數排序

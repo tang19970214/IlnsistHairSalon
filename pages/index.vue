@@ -69,11 +69,11 @@
       </div>
 
       <div class="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 translate-y-[-90px]">
-        <div class="w-full flex items-center justify-center" v-for="item in praiseList" :key="item.id" data-aos="fade-up"
+        <div class="w-full flex items-center justify-center" v-for="(item, idx) in praiseList" :key="idx" data-aos="fade-up"
           data-aos-duration="1500">
           <div @click="goPath(item.url)" class="w-full relative overflow-hidden cursor-pointer">
             <img :src="item.imgUrl" alt="" class="w-full h-60 object-cover duration-500 hover:scale-125" />
-            <div class="absolute left-0 bottom-0 z-10 w-full p-3 box-border bg-white bg-opacity-50">
+            <div class="absolute left-0 bottom-0 z-10 w-full p-3 box-border bg-white bg-opacity-70">
               <p class="text-sm">{{ item.label }}</p>
             </div>
           </div>
@@ -161,17 +161,22 @@ export default {
 
       /* 好評分享 */
       praiseList: [
-        { id: 1, label: "府中髮廊推薦【llnsist’s Hair Salon】燙染不分長短只要1000元 | 小資族最愛超高CP值髮廊 | 剪 燙 染 護都沒問題喔", imgUrl: require("~/static/images/praise/praise1.jpeg"), url: "https://reurl.cc/601KXb" },
-        { id: 2, label: "【板橋美髮】llnsist’s Hair Salon府中髮廊 染燙不分長度只要1000 頂級OLAPEX護髮結構修護", imgUrl: require("~/static/images/praise/praise2.jpeg"), url: "https://reurl.cc/eOeV4Q" },
-        { id: 3, label: "板橋府中美髮推薦｜llnsist’s Hair Salon染燙不分長短只要1000元｜女神頂級護髮｜板橋府中染髮｜板橋", imgUrl: require("~/static/images/praise/praise3.png"), url: "https://reurl.cc/NRkNd9" },
-        { id: 4, label: "『板橋髮廊推薦llnsist’s Hair Salon』府中商圈平價染燙髮一律1000元，小資族推薦髮廊", imgUrl: require("~/static/images/praise/praise4.jpeg"), url: "https://reurl.cc/zNvKay" },
-        { id: 5, label: "板橋府中美髮推薦｜板橋府中染髮｜llnsist’s Hair Salon｜OLAPEX 1+2劑深層結構護髮｜燙染ㄧ律1000元不分長短CP值超高", imgUrl: require("~/static/images/praise/praise5.jpeg"), url: "https://reurl.cc/jGNmKp" },
-        { id: 6, label: "【美髮】新北板橋「lnsist Hair Salon府中店」板橋平價髮廊推薦，燙、染不分長短均一價!", imgUrl: require("~/static/images/praise/praise6.png"), url: "https://reurl.cc/NRkNep" },
-        { id: 7, label: "板橋府中美髮推薦｜髮廊推薦｜板橋府中染髮 ｜llnsist’s Hair Salon ｜染燙不分長短只要1000元｜護髮產品CP值超高｜美髮造型", imgUrl: require("~/static/images/praise/praise7.png"), url: "https://reurl.cc/eOeVNx" },
-        { id: 8, label: "（府中髮廊）lnsist Hair Salon府中店～2022新開幕板橋髮廊！平價護髮、染髮好選擇！", imgUrl: require("~/static/images/praise/praise8.jpeg"), url: "https://reurl.cc/0X5arb" },
-        { id: 9, label: "【染護髮】春天來了 櫻花系染髮 日本鉑金護髮 llnsist’s Hair Salon 板橋府中站特殊染髮護髮推薦", imgUrl: require("~/static/images/praise/praise9.jpeg"), url: "https://reurl.cc/QbyVM5" },
-        { id: 10, label: "（板橋染髮）llnsist’s Hair Salon板橋府中店～2022新開幕染髮好選擇！一千元不分長短超高CP值！", imgUrl: require("~/static/images/praise/praise10.jpeg"), url: "https://reurl.cc/MNaMp3" },
-        { id: 11, label: "板橋府中髮廊推薦｜平價髮廊｜llnsist’s Hair Salon｜日本鉑金護髮｜燙染一律1000元不分長短CP值超高│天界之舟 行善濟世", imgUrl: require("~/static/images/praise/praise11.png"), url: "https://reurl.cc/XVdadj" },
+        { label: "府中髮廊推薦【llnsist’s Hair Salon】燙染不分長短只要1000元 | 小資族最愛超高CP值髮廊 | 剪 燙 染 護都沒問題喔", imgUrl: require("~/static/images/praise/praise1.jpeg"), url: "https://reurl.cc/601KXb" },
+        { label: "【板橋美髮】llnsist’s Hair Salon府中髮廊 染燙不分長度只要1000 頂級OLAPEX護髮結構修護", imgUrl: require("~/static/images/praise/praise2.jpeg"), url: "https://reurl.cc/eOeV4Q" },
+        { label: "板橋府中美髮推薦｜llnsist’s Hair Salon染燙不分長短只要1000元｜女神頂級護髮｜板橋府中染髮｜板橋", imgUrl: require("~/static/images/praise/praise3.png"), url: "https://reurl.cc/NRkNd9" },
+        { label: "『板橋髮廊推薦llnsist’s Hair Salon』府中商圈平價染燙髮一律1000元，小資族推薦髮廊", imgUrl: require("~/static/images/praise/praise4.jpeg"), url: "https://reurl.cc/zNvKay" },
+        { label: "板橋府中美髮推薦｜板橋府中染髮｜llnsist’s Hair Salon｜OLAPEX 1+2劑深層結構護髮｜燙染ㄧ律1000元不分長短CP值超高", imgUrl: require("~/static/images/praise/praise5.jpeg"), url: "https://reurl.cc/jGNmKp" },
+        { label: "【美髮】新北板橋「lnsist Hair Salon府中店」板橋平價髮廊推薦，燙、染不分長短均一價!", imgUrl: require("~/static/images/praise/praise6.png"), url: "https://reurl.cc/NRkNep" },
+        { label: "板橋府中美髮推薦｜髮廊推薦｜板橋府中染髮 ｜llnsist’s Hair Salon ｜染燙不分長短只要1000元｜護髮產品CP值超高｜美髮造型", imgUrl: require("~/static/images/praise/praise7.png"), url: "https://reurl.cc/eOeVNx" },
+        { label: "（府中髮廊）lnsist Hair Salon府中店～2022新開幕板橋髮廊！平價護髮、染髮好選擇！", imgUrl: require("~/static/images/praise/praise8.jpeg"), url: "https://reurl.cc/0X5arb" },
+        { label: "【染護髮】春天來了 櫻花系染髮 日本鉑金護髮 llnsist’s Hair Salon 板橋府中站特殊染髮護髮推薦", imgUrl: require("~/static/images/praise/praise9.jpeg"), url: "https://reurl.cc/QbyVM5" },
+        { label: "（板橋染髮）llnsist’s Hair Salon板橋府中店～2022新開幕染髮好選擇！一千元不分長短超高CP值！", imgUrl: require("~/static/images/praise/praise10.jpeg"), url: "https://reurl.cc/MNaMp3" },
+        { label: "板橋府中髮廊推薦｜平價髮廊｜llnsist’s Hair Salon｜日本鉑金護髮｜燙染一律1000元不分長短CP值超高│天界之舟 行善濟世", imgUrl: require("~/static/images/praise/praise11.png"), url: "https://reurl.cc/XVdadj" },
+        { label: "【新北髮廊】板橋高CP值Ilnsist’s Hair Salon小資族也可以高質感煥然一新，板橋燙染推薦，府中捷運髮廊", imgUrl: require("~/static/images/praise/praise12.jpeg"), url: "https://vocus.cc/article/65a7748dfd89780001fa0311" },
+        { label: "【美髮】新北板橋「IlNSIST’s Hair Salon府中店」板橋平價髮廊推薦，頭部鬆筋+負離子SPA太舒服!", imgUrl: require("~/static/images/praise/praise13.png"), url: "https://lovemolly21386.pixnet.net/blog/post/356991676" },
+        { label: "llnsist's Hair Salon府中店｜府中站2號出口旁｜燙、染ㄧ律1000元不分長短CP值爆高｜誰說美就要砸大錢｜板橋府中推薦平價髮廊", imgUrl: require("~/static/images/praise/praise14.jpeg"), url: "https://evonne1205.pixnet.net/blog/post/133240363" },
+        { label: "【板橋美髮】Ilnsist’s Hair Salon /燙染不分長度1000元 /專業超高CP值 /馬里克實測", imgUrl: require("~/static/images/praise/praise15.png"), url: "https://reurl.cc/eLnNbW" },
+        { label: "新北市板橋府中髮廊推薦/Ilnsist's Hair Salon/頭部鬆筋+肩頸放鬆+sap負離子脈衝護理/6號設計師手感剛好，舒服、舒壓很棒/除了這個之外染、燙不分長短1000、頂級護髮也高cp值", imgUrl: require("~/static/images/praise/praise16.jpeg"), url: "https://jessicalin.tw/blog/post/365690398" },
       ],
     };
   },
