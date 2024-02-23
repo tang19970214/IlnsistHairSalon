@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devServer: {
-    port: import.meta.env.NUXT_BASE_PORT || 3000,
+    port: import.meta.env.NUXT_BASE_PORT || 8080,
     host: '0.0.0.0',
   },
   nitro: {
