@@ -29,7 +29,7 @@ const reserveNow = () => {
           <a href="https://www.facebook.com/salon29590801" target="_blank">
             <img src="/images/facebook.svg" alt="FACEBOOK" />
           </a>
-          <a href="https://www.instagram.com/insist_hair_salon/" target="_blank">
+          <a href="https://www.instagram.com/iinsists_hair_salon?igsh=enFiOHFncTExNzNj&utm_source=qr" target="_blank">
             <img src="/images/instagram.svg" alt="INSTAGRAM" />
           </a>
           <a href="https://lin.ee/EZoNp6W" target="_blank">

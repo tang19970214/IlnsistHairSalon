@@ -30,7 +30,7 @@ onMounted(() => {
 
     <div class="md:hidden fixed right-3 z-10 flex items-center justify-center flex-col"
       :class="{ 'bottom-10': heightOverZero, 'bottom-103px': !heightOverZero }">
-      <a href="https://www.instagram.com/insist_hair_salon/" target="_blank">
+      <a href="https://www.instagram.com/iinsists_hair_salon?igsh=enFiOHFncTExNzNj&utm_source=qr" target="_blank">
         <img class="w-16" src="/images/global/Instagram.svg" alt="INSTAGRAM">
       </a>
       <a href="https://www.facebook.com/salon29590801" target="_blank">
