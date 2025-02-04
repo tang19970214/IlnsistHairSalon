@@ -7,23 +7,24 @@
     "dev": "nuxt dev --dotenv .env.dev",
     "generate": "nuxt generate --dotenv .env.prod",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "npm run prepare",
+    "prepare": "sleep 10 && nuxt prepare",
     "start": "node .output/server/index.mjs"
-  },
-  "dependencies": {
-    "@pinia/nuxt": "^0.4.11",
-    "@unocss/nuxt": "^0.56.0",
-    "@unocss/preset-web-fonts": "^0.56.0",
-    "lru-cache": "^9.1.2",
-    "pinia": "^2.1.6",
-    "sweetalert2": "^11.7.31"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@unocss/nuxt": "^0.56.0",
+    "@unocss/preset-web-fonts": "^0.56.0",
     "nuxt": "^3.7.3",
     "nuxt-aos": "^1.2.3",
     "nuxt-icon": "^0.5.0",
     "sass": "^1.54.8"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "lru-cache": "^9.1.2",
+    "pinia": "^2.1.6",
+    "sweetalert2": "^11.7.31"
   },
   "overrides": {
     "vue": "latest"
