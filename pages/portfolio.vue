@@ -9,7 +9,7 @@ useSeoMeta({
 const list = ref<any[]>([]);
 const getList = () => {
   const arr = [];
-  for (let i = 1; i <= 175; i++) {
+  for (let i = 1; i <= 194; i++) {
     arr.push(i);
   }
   // 亂數排序
