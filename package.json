@@ -7,8 +7,7 @@
     "dev": "nuxt dev --dotenv .env.dev",
     "generate": "nuxt generate --dotenv .env.prod",
     "preview": "nuxt preview",
-    "postinstall": "npm run prepare",
-    "prepare": "sleep 10 && nuxt prepare",
+    "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
