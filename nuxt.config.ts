@@ -43,7 +43,4 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-aos'
   ],
-  build: {
-    transpile: ['vue-router']
-  }
 });
