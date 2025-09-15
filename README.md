@@ -2,7 +2,7 @@
 
 ## Node Version
 ```
-18.12.1
+22.x
 ```
 
 ## Get Started
@@ -15,8 +15,8 @@ npm run dev
 How to update Website on GCP
 ```
 git pull
-nvm i 18.12.1
-nvm use 18.12.1
+nvm i 22
+nvm use 22
 npm run build
 gcloud app deploy (enter 'Y')
 ```

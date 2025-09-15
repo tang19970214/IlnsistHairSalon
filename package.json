@@ -25,6 +25,9 @@
     "pinia": "^2.1.6",
     "sweetalert2": "^11.7.31"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "overrides": {
     "vue": "latest"
   }
