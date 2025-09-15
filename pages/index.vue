@@ -71,7 +71,7 @@ const goPath = (url: string) => {
             集合年輕設計師的創意擁有許多經驗豐富與技巧純熟的設計師，不斷的自我成長[堅持]走在流行尖端是基本態度，善於溝通與傾聽，你不一定要花到很多錢找名師，在llnsist's Hair
             Salon，沒有誇張的手法，讓一切回歸髮廊最貼近妳生活，[堅持]變美變得更簡單無壓力，以歐洲的手刷染、日韓的燙髮以及台灣剪裁，讓我們帶著你輕消費。</p>
           <p class="text-black text-opacity-40 tracking-widest leading-7">
-            經營理念：所有項目不分長短度，全台CP值首選髮廊，染燙使用原裝歐盟進口染膏、萊雅進口染膏、哥德式、歌葳、OLAPLEX結構護。</p>
+            經營理念：所有項目不分長短度，全台CP值首選髮廊。在這裡，每一次造型，都是送給自己的禮物，匠心設計專屬於你/妳個人獨一無二的的風格與光彩。</p>
           <p class="text-black text-opacity-40 tracking-widest leading-7">沙龍產品.品質保證，『堅持』消費體驗無壓力。</p>
           <strong class="text-#E8A29E tracking-widest leading-7 pt-3"> *若發生未經告知額外加價之情形，顧客有權拒絕消費 </strong>
         </div>
