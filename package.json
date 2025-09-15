@@ -29,6 +29,6 @@
     "node": ">=22.0.0"
   },
   "overrides": {
-    "vue": "latest"
+    "vue": "^3.5.0"
   }
 }
