@@ -13,9 +13,12 @@
   "devDependencies": {
     "@nuxt/devtools": "^2.6.3",
     "@nuxt/icon": "^2.0.0",
+    "@unocss/nuxt": "^66.5.1",
+    "@unocss/preset-web-fonts": "^66.5.1",
     "nuxt": "^4.1.2",
     "nuxt-aos": "^1.2.5",
-    "sass": "^1.92.1"
+    "sass": "^1.92.1",
+    "unocss": "^66.5.1"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.11.2",
