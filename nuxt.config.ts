@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   imports: {
     "dirs": ['store', 'composables']
   },
-  modules: ['@pinia/nuxt', '@unocss/nuxt', 'nuxt-aos', '@nuxt/icon'],
+  modules: ['@pinia/nuxt', 'nuxt-aos', '@nuxt/icon'],
   icon: {
     serverBundle: 'local'
   },
