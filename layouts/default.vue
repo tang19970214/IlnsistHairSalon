@@ -47,8 +47,7 @@ onMounted(() => {
     <div v-if="heightOverZero" @click="goTop()" class="hidden md:block fixed right-3 bottom-10 animate-bounce">
       <div
         class="w-15 min-w-15 max-w-15 h-15 min-h-15 max-h-15 flex items-center justify-center bg-#E8A29E rounded-full shadow-lg border-px border-solid border-gray-100 cursor-pointer z-10 duration-500 hover:bg-gray-100 group">
-        <!-- <img src="/images/global/GoTop.svg" alt="GO TOP"> -->
-        <Icon name="fluent-emoji-high-contrast:top-arrow" size="32px" class="text-white group-hover:text-#E8A29E" />
+        <img src="/images/global/GoTop.svg" alt="GO TOP" class="w-8 h-8 text-white group-hover:text-#E8A29E" />
       </div>
     </div>
 

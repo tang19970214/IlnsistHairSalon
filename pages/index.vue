@@ -145,12 +145,10 @@ const goPath = (url: string) => {
 
         <div class="absolute -bottom-5 left-0 w-full flex items-center justify-center z-10">
           <button
-            class="px-4 py-2 border-px border-solid border-#C1AC7A bg-white text-#C1AC7A flex items-center tracking-tight cursor-pointer duration-500 hover:bg-#C1AC7A hover:text-white"
+            class="px-4 py-2 border-px border-solid border-#C1AC7A bg-white text-#C1AC7A flex items-center gap-2 tracking-tight cursor-pointer duration-500 hover:bg-#C1AC7A hover:text-white"
             @click="openGoogleMap()">
-            <p class="font-mono">
-              Google map
-              <icon name="material-symbols:arrow-right-alt" size="18px" color="#C1AC7A" class="ml-1" />
-            </p>
+            <p class="font-mono">Google map</p>
+            <icon name="material-symbols:arrow-right-alt" size="18px" color="#C1AC7A" />
           </button>
         </div>
       </div>

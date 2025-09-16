@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   app: {
     head: {
       viewport: 'width=device-width, initial-scale=1',
@@ -37,10 +37,8 @@ export default defineNuxtConfig({
   imports: {
     "dirs": ['store', 'composables']
   },
-  modules: [
-    '@pinia/nuxt',
-    '@unocss/nuxt',
-    'nuxt-icon',
-    'nuxt-aos'
-  ],
+  modules: ['@pinia/nuxt', '@unocss/nuxt', 'nuxt-aos', '@nuxt/icon'],
+  icon: {
+    serverBundle: 'local'
+  },
 });
